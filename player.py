@@ -1,17 +1,13 @@
 import random
 import copy
 
-RED_PLAYER_VAL = -1
-YELLOW_PLAYER_VAL = 1
+playerOne = -1
 
 class Player:
-
-
     def __init__(self, value, strategy='random', model=None):
         self.value = value
         self.strategy = strategy
         self.model = model
-
 
     def getMove(self, availableMoves, board):
         if self.strategy == "random":
@@ -22,7 +18,7 @@ class Player:
             for availableMove in availableMoves:  
                 boardCopy = copy.deepcopy(board)
                 boardCopy[availableMove[0]][availableMove[1]] = self.value
-                if self.value == RED_PLAYER_VAL:
+                if self.value == playerOne:
                     value = self.model.predict(boardCopy, 2)
                 else:
                     value = self.model.predict(boardCopy, 0)

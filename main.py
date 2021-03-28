@@ -2,38 +2,39 @@ from game import Game
 from player import  Player
 from game_controller import GameController
 from model import ConnectFourModel
-# from gym_connect4.envs.connect4_env import Connect4Env
 
 
-RED_PLAYER_VAL = 1
-YELLOW_PLAYER_VAL = 2
-GAME_STATE_NOT_ENDED = 2
+playerOneVal= -1
+playerTwoVal = 1
 
-def f():
+def main():
+    y = []
+    x=[]
+    i = 14500
+#     while i <= 16000:
+    x.append(i)
     firstGame = Game()
-    redPlayer = Player(RED_PLAYER_VAL, strategy='random')
-    yellowPlayer = Player(YELLOW_PLAYER_VAL, strategy='random')
+    playerOne = Player(playerOneVal, strategy='random')
+    playerTwo = Player(playerTwoVal, strategy='random')
 
-    gameController = GameController(firstGame, redPlayer, yellowPlayer)
+    gameController = GameController(firstGame, playerOne, playerTwo)
     print ("Playing with both players with random strategies")
-    gameController.simulateManyGames(1000)
+    gameController.simulateManyGames(i)
 
     model = ConnectFourModel(42, 3, 50, 100)
-#     print(gameController.getTrainingHistory())
     model.train(gameController.getTrainingHistory())
 
-    redNeuralPlayer = Player(RED_PLAYER_VAL, strategy='model', model=model)
-    yellowNeuralPlayer = Player(YELLOW_PLAYER_VAL, strategy='model', model=model)
+    playerOneNeural = Player(playerOneVal, strategy='model', model=model)
+    playerTwoNeural = Player(playerTwoVal, strategy='model', model=model)
 
     secondGame = Game()
-    gameController = GameController(secondGame, redPlayer, yellowNeuralPlayer)
-    print ("Playing with yellow player as Neural Network")
-    gameController.simulateManyGames(1000)
+    gameController = GameController(secondGame, playerOneNeural, playerTwo)
+    print("Playing with player 1 as Neural Network")
+    res = gameController.simulateManyGames(1000)
+    y.append(res)
 
-    thirdGame = Game()
-    gameController = GameController(thirdGame, redNeuralPlayer, yellowPlayer)
-    print("Playing with red player as Neural Network")
-    gameController.simulateManyGames(1000)
+#         break
 
+    return x, y
 
 
