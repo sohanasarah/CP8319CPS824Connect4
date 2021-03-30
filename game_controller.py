@@ -34,6 +34,9 @@ class GameController:
         print('Draws: ' + str((self.draws * 100 / numberOfGames)) + '%')
         print('Draws: ' + str(int(self.draws)))
 
+        return self.player1Wins
+
+
 
     def playGame(self):
         playerToMove = self.redPlayer
