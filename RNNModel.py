@@ -23,7 +23,6 @@ class ConnectFourModelRNN:
         self.model.add(Dense(numberOfOutputs, activation='softmax'))
         self.model.compile(loss='categorical_crossentropy', optimizer="nadam", metrics=['accuracy'])
 
-
     def getModel(self):
         return self.model
     
