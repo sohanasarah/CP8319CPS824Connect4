@@ -7,6 +7,7 @@ from keras.layers import Dense, Activation
 from keras.utils.vis_utils import plot_model
 import keras
 from keras.layers import Dropout
+
 class ConnectFourModelRNN:
 
     def __init__(self, numberOfInputs, numberOfOutputs, batchSize, epochs):
@@ -19,7 +20,6 @@ class ConnectFourModelRNN:
         self.model.add(LSTM(42, return_sequences=True, 
                dropout=0.1, recurrent_dropout=0.1, input_shape=(1,numberOfInputs)))
         self.model.add(Dense(64, activation='relu'))
-
         self.model.add(Dense(numberOfOutputs, activation='softmax'))
         self.model.compile(loss='categorical_crossentropy', optimizer="nadam", metrics=['accuracy'])
 
@@ -41,7 +41,6 @@ class ConnectFourModelRNN:
         X_train = X[:limit]
         
         X_train = X_train[:, np.newaxis, :]
-        print(X_train.shape)
 
         X_test = X[limit:]
         y_train = y[:limit]
@@ -56,5 +55,5 @@ class ConnectFourModelRNN:
 
     def predict(self, data, index):
         d = np.array(data).reshape(-1, self.numberOfInputs)
-        d=d[:, np.newaxis, :]
+        d = d[:, np.newaxis, :]
         return self.model.predict(d)[0][0][index]

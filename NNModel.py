@@ -7,7 +7,8 @@ from keras.layers import Dense, Activation
 from keras.utils.vis_utils import plot_model
 import keras
 from keras.layers import Dropout
-class ConnectFourModel:
+
+class ConnectFourModelNN:
 
     def __init__(self, numberOfInputs, numberOfOutputs, batchSize, epochs):
         self.numberOfInputs = numberOfInputs
@@ -18,7 +19,7 @@ class ConnectFourModel:
         self.model = Sequential()
         self.model.add(Dense(42, activation='relu', input_shape=(numberOfInputs,)))
         self.model.add(Dense(64, activation='relu'))
-        self.model.add(Dropout(0.2))
+        self.model.add(Dropout(0.4))
         self.model.add(Dense(64, activation='relu'))
         self.model.add(Dense(42, activation='relu'))
         self.model.add(Dense(numberOfOutputs, activation='softmax'))

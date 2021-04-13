@@ -3,7 +3,6 @@ import copy
 import gym
 from gym_connect4.envs.connect4_env import Connect4Env
 
-
 emptyVal = 0
 gameStateDraw = 0
 gameStateNotEnded = 2
