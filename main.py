@@ -1,9 +1,8 @@
 from game import Game
 from player import  Player
-from GameController import GameController
-from RNNModel import ConnectFourModelRNN
-from NNModel import ConnectFourModelNN
-from keras.models import load_model
+from gameController import GameController
+from rnnModel import ConnectFourModelRNN
+from nnModel import ConnectFourModelNN
 
 playerOneVal= -1
 playerTwoVal = 1
@@ -13,6 +12,7 @@ def main():
     secondGame = Game()
     thirdGame = Game()
     fourthGame = Game()
+    
     #create players
     print("Creating Players")
     playerOne = Player(playerOneVal, strategy='random')
