@@ -1,11 +1,13 @@
 # CP8319CPS824Connect4
 
+The game of Connect4 with Deep Q-Learning
+
 The project contains the following classes-
 
   The Game Class (game.py)- contains the board of the game, the board history, the game states, the available moves and the results.
   
-  The Player Class(player.py)- it has two strategies- First one is a random strategy, where the player randomly chooses a move from the list of available moves.
-  The second one is based on the Neural Network model (MLP or RNN) 
+  The Player Class(player.py)- it has two strategies- first one is a random strategy, where the player randomly chooses a move from the list of available moves.
+  The second one is based on the Neural Network model (MultiLayer Perceptron or Recurrent Neural Network) 
   
   The Game Controller Class (gameController.py)- it controls the flow of the games. it simulates multiple games and collects the board history from the Game class 
   and build a training history. It takes the available moves from the board and let the player choose the move. Then it passes that move back to the board.
