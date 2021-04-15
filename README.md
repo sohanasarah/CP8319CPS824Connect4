@@ -1,6 +1,6 @@
 # CP8319CPS824Connect4
 
-The game of Connect4 with Deep Q-Learning
+## **The game of Connect4 with Deep Q-Learning**
 
 The project contains the following classes-
 
