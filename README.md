@@ -2,7 +2,17 @@
 
 ## **The game of Connect4 with Deep Q-Learning**
 
+### Instructions ###
+
+Following libraries are needed to run the project-
+***Gym***
+***Tensorflow***
+***Keras***
+
 ***Evaluation.ipynb*** runs the project and shows the game results.
+
+
+### Project Structure ###
 The project contains the following classes-
 
   The ***Game*** Class (game.py)- contains the board of the game, the board history, the game states, the available moves and the results.
