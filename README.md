@@ -5,12 +5,11 @@
 ### Instructions ###
 
 Following libraries are needed to run the project-
-***Gym***
-***Tensorflow***
-***Keras***
+- ***Gym***
+- ***Tensorflow***
+- ***Keras***
 
-***Evaluation.ipynb*** runs the project and shows the game results.
-
+Please run the ***Evaluation.ipynb***. This will train the models and show the game results.
 
 ### Project Structure ###
 The project contains the following classes-
