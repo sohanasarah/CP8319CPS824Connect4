@@ -2,7 +2,7 @@
 
 ## **The game of Connect4 with Deep Q-Learning**
 
-Evaluation.ipynb runs the project and shows the game results.
+***Evaluation.ipynb*** runs the project and shows the game results.
 The project contains the following classes-
 
   The ***Game*** Class (game.py)- contains the board of the game, the board history, the game states, the available moves and the results.
