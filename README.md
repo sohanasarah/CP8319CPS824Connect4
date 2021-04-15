@@ -9,7 +9,7 @@ Following libraries are needed to run the project-
 - ***Tensorflow***
 - ***Keras***
 
-Please run the ***Evaluation.ipynb***. This will train the models and show the game results.
+Please run the ***Evaluation.ipynb***. This will train the agents, make them play the game of connect 4 and show the game results.
 
 ### Project Structure ###
 The project contains the following classes-
